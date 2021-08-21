@@ -17,19 +17,17 @@ async def on_message(message):
         await message.channel.send('Hello!')
 
     if message.content.startswith('<3*pour-some-suga-on-me'):
-      await message.channel.send('Show a sexy picture of suga')
+      image_num = random.randint(0,199)
+      filepath = f'images/suga/{image_num}_suga.jpg'
+      await message.channel.send(file=discord.File(filepath))
 
     if message.content.startswith('<3*lets-get-handsy'):
-      await message.channel.send('Show a picture of BTS hands')
+      image_num = random.randint(0,199)
+      filepath = f'images/suga/{image_num}_hands.jpg'
+      await message.channel.send(file=discord.File(filepath))
 
     if message.content.startswith("<3*namtiddies"):
       await message.channel.send('show a picture of RMs chest')
 
-    if message.content.startswith('<3*get-image'):
-      image_num = random.randint(0,199)
-      filepath = f'images/suga/{image_num}_suga.jpg'
-      #await message.channel.send(file=discord.File('1_suga.jpg'))
-      await message.channel.send(file=discord.File(filepath))
-      #https://replit.com/@KatieFauci/BTSArmyBot#images/suga/1_suga.jpg
 
 client.run(os.getenv('TOKEN'))
