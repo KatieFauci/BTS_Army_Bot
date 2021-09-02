@@ -152,6 +152,14 @@ bs4 = "*"
 requests = "*"
 
 [[package]]
+name = "maxembeds"
+version = "0.0.1"
+description = "Awesome EmbedBuilder for discord.py"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "multidict"
 version = "5.1.0"
 description = "multidict implementation"
@@ -221,7 +229,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "a00485cb559fc6c049a3dfffe4176a6182fefe6bd8dff435430007f28a822815"
+content-hash = "cb67e919ce241cca7e1cdde892d3c45e6b36fe56c04bbd0a4bf5ab0141641153"
 
 [metadata.files]
 aiohttp = [
@@ -308,6 +316,10 @@ idna = [
 ]
 lyricscorpora = [
     {file = "lyricscorpora-1.0.0.tar.gz", hash = "sha256:1629f61a0a317ca8cfb13ce24eff1c6ac415da57adbd256bcc7e01c4d885b3d2"},
+]
+maxembeds = [
+    {file = "maxembeds-0.0.1-py3-none-any.whl", hash = "sha256:4c5705ba6e689f7428865084e977b2dfa11ca99cbd4f20d6c74b17dfed144ae7"},
+    {file = "maxembeds-0.0.1.tar.gz", hash = "sha256:1b0c32e82bcedf842fc216ed09954410e705f9e9a455c525eeda57e64b1a4d8e"},
 ]
 multidict = [
     {file = "multidict-5.1.0-cp36-cp36m-macosx_10_14_x86_64.whl", hash = "sha256:b7993704f1a4b204e71debe6095150d43b2ee6150fa4f44d6d966ec356a8d61f"},
