@@ -8,7 +8,7 @@ import actions
 # GLOBALS
 client = discord.Client()
 purple = discord.Color.purple()
-tag = '<3*'
+tag = '*'
 commands = {'joon-joon', 
             'pour-some-suga-on-me',
             'WWH',
@@ -141,6 +141,14 @@ async def on_message(message):
     if message.content.startswith(f'{tag}critical-hit'):
       image_num = random.randint(0,105)
       filepath = f'images/Attack/{image_num}_Attack.jpg'
+      await message.channel.send(file=discord.File(filepath))
+
+    #------------------------------------------------
+    # Shows a random thirst photo of their thighs
+    #------------------------------------------------
+    if message.content.startswith(f'{tag}kill-me-with-your-thighs'):
+      image_num = random.randint(0,105)
+      filepath = f'images/Attack/{image_num}_Booty.jpg'
       await message.channel.send(file=discord.File(filepath))
 
     #------------------------------------------------
