@@ -23,7 +23,7 @@ commands = {'joon-joon',
             'where-da-boys-at',
             'kill-me-with-your-thighs',
             'getting sudsy (SOPE, NOT DONE',
-            'give-me-some-inspo (Quotes, NOT DONE)'
+            'give-me-some-inspo (Quotes, NOT DONE)',
             'meme'}
 
 
