@@ -23,7 +23,8 @@ commands = {'joon-joon',
             'where-da-boys-at',
             'kill-me-with-your-thighs (NOT DONE)',
             'getting sudsy (SOPE, NOT DONE',
-            'give-me-some-inspo (Quotes, NOT DONE)'}
+            'give-me-some-inspo (Quotes, NOT DONE)'
+            'meme'}
 
 
 
@@ -147,8 +148,16 @@ async def on_message(message):
     # Shows a random thirst photo of their thighs
     #------------------------------------------------
     if message.content.startswith(f'{tag}kill-me-with-your-thighs'):
-      image_num = random.randint(0,105)
-      filepath = f'images/Attack/{image_num}_Booty.jpg'
+      image_num = random.randint(0,37)
+      filepath = f'images/Booty/{image_num}_Booty.jpg'
+      await message.channel.send(file=discord.File(filepath))
+
+    #------------------------------------------------
+    # Shows a random meme
+    #------------------------------------------------
+    if message.content.startswith(f'{tag}meme'):
+      image_num = random.randint(0,37)
+      filepath = f'images/meme/{image_num}_meme.jpg'
       await message.channel.send(file=discord.File(filepath))
 
     #------------------------------------------------
