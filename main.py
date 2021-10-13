@@ -9,17 +9,21 @@ import actions
 client = discord.Client()
 purple = discord.Color.purple()
 tag = '<3*'
-commands = {'pour-some-suga-on-me',
-            'give-me-a-kookie (NOT DONE)',
-            'mr-steal-yo-girl (NOT DONE)',
-            'WWH (NOT DONE)',
+commands = {'joon-joon', 
+            'pour-some-suga-on-me',
+            'WWH',
+            'give-me-some-hope',
+            'mr-steal-yo-girl',
+            'gucci-boy',
+            'give-me-a-kookie',
             'lets-get-handsy',
             'namtiddies',
+            'critical-hit',
             'hot-100',
             'where-da-boys-at',
             'kill-me-with-your-thighs (NOT DONE)',
             'getting sudsy (SOPE, NOT DONE',
-            'give-me-some-inspo (NOT DONE)'}
+            'give-me-some-inspo (Quotes, NOT DONE)'}
 
 
 
@@ -52,9 +56,18 @@ async def on_message(message):
     #------------------------------------------------
     # Sends a random picture of RM
     #------------------------------------------------
-    if message.content.startswith(f'{tag}Joon-Joon'):
-      image_num = random.randint(0,243)
-      filepath = f'images/suga/{image_num}_suga.jpg'
+    if message.content.startswith(f'{tag}joon-joon'):
+      image_num = random.randint(0,129)
+      filepath = f'images/RM/{image_num}_RM.jpg'
+      await message.channel.send(file=discord.File(filepath))
+
+
+    #------------------------------------------------
+    # Sends a random picture of Jin
+    #------------------------------------------------
+    if message.content.startswith(f'{tag}WWH'):
+      image_num = random.randint(0,115)
+      filepath = f'images/Jin/{image_num}_Jin.jpg'
       await message.channel.send(file=discord.File(filepath))
 
 
@@ -62,9 +75,46 @@ async def on_message(message):
     # Sends a random picture of SUGA
     #------------------------------------------------
     if message.content.startswith(f'{tag}pour-some-suga-on-me'):
-      image_num = random.randint(0,243)
-      filepath = f'images/suga/{image_num}_suga.jpg'
+      image_num = random.randint(0,581)
+      filepath = f'images/Suga/{image_num}_Suga.jpg'
       await message.channel.send(file=discord.File(filepath))
+
+
+    #------------------------------------------------
+    # Sends a random picture of J-Hope
+    #------------------------------------------------
+    if message.content.startswith(f'{tag}give-me-some-hope'):
+      image_num = random.randint(0,168)
+      filepath = f'images/J-Hope/{image_num}_J-Hope.jpg'
+      await message.channel.send(file=discord.File(filepath))
+
+
+    #------------------------------------------------
+    # Sends a random picture of Jimin
+    #------------------------------------------------
+    if message.content.startswith(f'{tag}mr-steal-yo-girl'):
+      image_num = random.randint(0,144)
+      filepath = f'images/Jimin/{image_num}_Jimin.jpg'
+      await message.channel.send(file=discord.File(filepath))
+
+
+    #------------------------------------------------
+    # Sends a random picture of V
+    #------------------------------------------------
+    if message.content.startswith(f'{tag}gucci-boy'):
+      image_num = random.randint(0,75)
+      filepath = f'images/V/{image_num}_V.jpg'
+      await message.channel.send(file=discord.File(filepath))
+
+
+    #------------------------------------------------
+    # Shows a ramdom of picture of Jungkook
+    #------------------------------------------------
+    if message.content.startswith(f'{tag}give-me-a-kookie'):
+      image_num = random.randint(0,272)
+      filepath = f'images/JK/{image_num}_JK.jpg'
+      await message.channel.send(file=discord.File(filepath))
+
 
 
     #------------------------------------------------
@@ -84,14 +134,14 @@ async def on_message(message):
       filepath = f'images/namtiddies/{image_num}_namtiddies.jpg'
       await message.channel.send(file=discord.File(filepath))
 
-    #------------------------------------------------
-    # Shows a ramdom of picture of Jungkook
-    #------------------------------------------------
-    if message.content.startswith(f'{tag}give-me-a-kookie'):
-      image_num = random.randint(0,0)
-      filepath = f'images/jk/{image_num}_jk.jpg'
-      await message.channel.send(file=discord.File(filepath))
 
+    #------------------------------------------------
+    # Shows a random attack photo
+    #------------------------------------------------
+    if message.content.startswith(f'{tag}critical-hit'):
+      image_num = random.randint(0,105)
+      filepath = f'images/Attack/{image_num}_Attack.jpg'
+      await message.channel.send(file=discord.File(filepath))
 
     #------------------------------------------------
     # Display the top ten on the hot 100
