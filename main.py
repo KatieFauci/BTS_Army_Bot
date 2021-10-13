@@ -21,7 +21,7 @@ commands = {'joon-joon',
             'critical-hit',
             'hot-100',
             'where-da-boys-at',
-            'kill-me-with-your-thighs (NOT DONE)',
+            'kill-me-with-your-thighs',
             'getting sudsy (SOPE, NOT DONE',
             'give-me-some-inspo (Quotes, NOT DONE)'
             'meme'}
