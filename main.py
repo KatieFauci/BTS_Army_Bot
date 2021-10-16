@@ -9,7 +9,7 @@ import actions
 client = discord.Client()
 purple = discord.Color.purple()
 tag = '*'
-commands = {'joon-joon', 
+commands = ['joon-joon', 
             'WWH',
             'pour-some-suga-on-me',
             'give-me-some-hope',
@@ -24,7 +24,7 @@ commands = {'joon-joon',
             'kill-me-with-your-thighs',
             'getting sudsy (SOPE, NOT DONE',
             'give-me-some-inspo (Quotes, NOT DONE)',
-            'meme'}
+            'meme']
 
 
 
