@@ -9,7 +9,7 @@ import actions
 client = discord.Client()
 purple = discord.Color.purple()
 tag = '*'
-commands = ['joon-joon', 
+image_com = ['joon-joon', 
             'WWH',
             'pour-some-suga-on-me',
             'give-me-some-hope',
@@ -19,12 +19,11 @@ commands = ['joon-joon',
             'lets-get-handsy',
             'namtiddies',
             'critical-hit',
-            'hot-100',
-            'where-da-boys-at',
             'kill-me-with-your-thighs',
-            'getting sudsy (SOPE, NOT DONE',
-            'give-me-some-inspo (Quotes, NOT DONE)',
-            'meme']
+            'meme',]
+
+act_com = ['hot-100',
+          'where-da-boys-at']
 
 
 
@@ -136,7 +135,7 @@ async def on_message(message):
     #------------------------------------------------
     # Shows a random picture of their hands
     #------------------------------------------------
-    if message.content.startswith(f'{tag}lets-get-handsy'):
+    if message.content.startswith(f'{tag}{commands[7]}'):
       folder = f'hands'
       dir_path = f'images/{folder}'
       file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
@@ -147,7 +146,7 @@ async def on_message(message):
     #------------------------------------------------
     # Shows a random picture of RM's chest
     #------------------------------------------------
-    if message.content.startswith(f'{tag}namtiddies'):
+    if message.content.startswith(f'{tag}{commands[8]}'):
       folder = f'namtiddies'
       dir_path = f'images/{folder}'
       file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
@@ -158,7 +157,7 @@ async def on_message(message):
     #------------------------------------------------
     # Shows a random attack photo
     #------------------------------------------------
-    if message.content.startswith(f'{tag}critical-hit'):
+    if message.content.startswith(f'{tag}{commands[9]}'):
       folder = f'Attack'
       dir_path = f'images/{folder}'
       file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
@@ -167,7 +166,7 @@ async def on_message(message):
     #------------------------------------------------
     # Shows a random thirst photo of their thighs
     #------------------------------------------------
-    if message.content.startswith(f'{tag}kill-me-with-your-thighs'):
+    if message.content.startswith(f'{tag}{commands[10]}'):
       folder = f'Booty'
       dir_path = f'images/{folder}'
       file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
