@@ -1,6 +1,7 @@
 import billboard
 from MaxEmbeds import EmbedBuilder
 import discord
+import os
 
 
 
@@ -79,5 +80,11 @@ def get_file(path):
       print("FILE NOT FOUND")
 
 def get_range(path):
-  
+  directory = input(path)
+  os.chdir(directory)
+  count = 0
 
+  for file in enumerate(os.listdir()):
+    count += 1
+
+  return count-1

@@ -56,7 +56,9 @@ async def on_message(message):
 
 
 #-------------------------------------------------------
+#
 #***************    IMAGE SEND COMMANDS *************** 
+#
 #-------------------------------------------------------
 
 
@@ -64,10 +66,9 @@ async def on_message(message):
     # Sends a random picture of RM
     #------------------------------------------------
     if message.content.startswith(f'{tag}joon-joon'):
-      
-      image_num = random.randint(0,129)
-      filepath = f'images/RM/{random.randint(0,129)}_RM'
-      await message.channel.send(file=discord.File(filepath))
+      file_tag = f'RM'
+      file_path = f'images/{tag}/{random.randint(0,actions.get_range())}_{file_tag}'
+      await message.channel.send(file=discord.File(file_path))
 
 
     #------------------------------------------------
