@@ -50,7 +50,6 @@ async def on_message(message):
     if message.content.startswith(f'{tag}help'):
       image_commands = actions.commands_string(image_com)
       action_commands = actions.commands_string(act_com)
-     # embed = actions.build_embed('Army Commands', '', purple, "Get Random Image:", image_commands, 'Actions:', action_commands)
 
       embed = EmbedBuilder (
         title = 'Army Commands', 
@@ -60,7 +59,7 @@ async def on_message(message):
         footer = '',
         thumbnail = ''
       ).build()
-
+      
       await message.channel.send(embed=embed)
 
 
