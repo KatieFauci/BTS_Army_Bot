@@ -69,22 +69,29 @@ def build_embed(ti, desc, col, f_title, f_mes, foot, tn):
 
 
 def get_file(path):
+  print(f'GET FILE')
   try:
     # try finding file as .jpg
+    print(f'GET FILE AT >>> {path}.jpg')
     return discord.File(f'{path}.jpg')
   except:
     #try finding file as .gif
     try:
+      print(f'GET FILE AT >>> {path}.gif')
       return discord.File(f'{path}.gif')
     except:
       print("FILE NOT FOUND")
+      return discord.File(f'images/RM/0_RM.jpg')
 
-def get_range(path):
-  directory = input(path)
-  os.chdir(directory)
+
+def get_range(dir):
+  orig_dir = os.getcwd()
+  print(f'ORIGINAL DIRECTORY >> {orig_dir}')
+  print(f'GET RANGE IN >> {dir}')
+  os.chdir(dir)
   count = 0
-
   for file in enumerate(os.listdir()):
     count += 1
-
+  print(f'RANGE >> {count-1}')
+  os.chdir(orig_dir)
   return count-1

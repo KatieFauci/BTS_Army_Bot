@@ -65,19 +65,29 @@ async def on_message(message):
     #------------------------------------------------
     # Sends a random picture of RM
     #------------------------------------------------
+    #if message.content.startswith(f'{tag}joon-joon'):
+      #end = actions.get_range("images/RM")
+      #print(f'RANGE >> {end}')
+     # image_num = random.randint(0,actions.get_range("images/RM"))
+      #image_num = random.randint(0, 50);
+     # filepath = f'images/RM/{image_num}_RM'
+     # print(f'FILE PATH >> {filepath}')
+      #await message.channel.send(file=discord.File(filepath))
+      #await message.channel.send(file=discord.File('images/RM/102_RM.jpg'))
+     # await message.channel.send(file=actions.get_file(filepath))
+
+
+
     if message.content.startswith(f'{tag}joon-joon'):
-      file_tag = f'RM'
-      file_path = f'images/{tag}/{random.randint(0,actions.get_range())}_{file_tag}'
-      await message.channel.send(file=discord.File(file_path))
+      folder = f'RM'
+      dir_path = f'images/{folder}'
+      file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
+      await message.channel.send(file=actions.get_file(file_path))
 
 
     #------------------------------------------------
     # Sends a random picture of Jin
     #------------------------------------------------
-    if message.content.startswith(f'{tag}WWH'):
-      image_num = random.randint(0,115)
-      filepath = f'images/Jin/{image_num}_Jin.jpg'
-      await message.channel.send(file=discord.File(filepath))
 
 
     #------------------------------------------------
@@ -198,10 +208,17 @@ async def on_message(message):
         count = count + 1
 
 
+
+
+
+
+
+
     # test file extension detect
-    if message.content.startswith(f'{tag}check-file-type'):
+    if message.content.startswith(f'{tag}test'):
       image_num = random.randint(0,3)
       filepath = f'images/file_type_test/{image_num}_test.'
+      #await message.channel.send(file=discord.File("images/file_type_test/0_test..jpg"))
       await message.channel.send(file=actions.get_file(filepath))
 
 
