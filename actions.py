@@ -9,7 +9,7 @@ import os
 # build display string for commands
 #------------------------------------------------
 def commands_string(commands):
-  output = ''
+  output = '--------------------------\n'
   for com in commands:
     output = output + f'-  {com}\t\n'
 
