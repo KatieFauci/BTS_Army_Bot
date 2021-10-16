@@ -20,7 +20,8 @@ image_com = ['joon-joon',
             'namtiddies',
             'critical-hit',
             'kill-me-with-your-thighs',
-            'meme',]
+            'meme',
+            'heart-you']
 
 act_com = ['hot-100',
           'where-da-boys-at',]
@@ -186,6 +187,16 @@ async def on_message(message):
     #------------------------------------------------
     if message.content.startswith(f'{tag}{image_com[11]}'):
       folder = f'meme'
+      dir_path = f'images/{folder}'
+      file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
+      await message.channel.send(file=actions.get_file(file_path))
+
+
+    #------------------------------------------------
+    # Shows a random love photo
+    #------------------------------------------------
+    if message.content.startswith(f'{tag}{image_com[12]}'):
+      folder = f'heart'
       dir_path = f'images/{folder}'
       file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
       await message.channel.send(file=actions.get_file(file_path))
