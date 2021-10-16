@@ -54,12 +54,19 @@ async def on_message(message):
       embed = actions.build_embed('Army Commands', '', purple, "Commands:", mes, '', '')
       await message.channel.send(embed=embed)
 
+
+#-------------------------------------------------------
+#***************    IMAGE SEND COMMANDS *************** 
+#-------------------------------------------------------
+
+
     #------------------------------------------------
     # Sends a random picture of RM
     #------------------------------------------------
     if message.content.startswith(f'{tag}joon-joon'):
+      
       image_num = random.randint(0,129)
-      filepath = f'images/RM/{image_num}_RM'
+      filepath = f'images/RM/{random.randint(0,129)}_RM'
       await message.channel.send(file=discord.File(filepath))
 
 
@@ -159,6 +166,13 @@ async def on_message(message):
       image_num = random.randint(0,37)
       filepath = f'images/meme/{image_num}_meme.jpg'
       await message.channel.send(file=discord.File(filepath))
+
+
+
+
+
+
+
 
     #------------------------------------------------
     # Display the top ten on the hot 100

@@ -78,4 +78,6 @@ def get_file(path):
     except:
       print("FILE NOT FOUND")
 
+def get_range(path):
+  
 
