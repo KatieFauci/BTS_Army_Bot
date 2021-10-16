@@ -9,7 +9,7 @@ import actions
 client = discord.Client()
 purple = discord.Color.purple()
 tag = '*'
-commands = ['joon-joon', 
+image_com = ['joon-joon', 
             'WWH',
             'pour-some-suga-on-me',
             'give-me-some-hope',
@@ -19,12 +19,10 @@ commands = ['joon-joon',
             'lets-get-handsy',
             'namtiddies',
             'critical-hit',
-            'hot-100',
-            'where-da-boys-at',
-            'kill-me-with-your-thighs',
-            'getting sudsy (SOPE, NOT DONE',
-            'give-me-some-inspo (Quotes, NOT DONE)',
-            'meme']
+            'kill-me-with-your-thighs',]
+
+act_com = ['hot-100',
+          'where-da-boys-at',]
 
 
 
@@ -49,9 +47,9 @@ async def on_message(message):
     # Lists All commands
     #------------------------------------------------
     if message.content.startswith(f'{tag}help'):
-      mes = actions.commands_string(commands)
-      print(mes)
-      embed = actions.build_embed('Army Commands', '', purple, "Commands:", mes, '', '')
+      image_commands = actions.commands_string(image_com)
+      action_commands = actions.commanfs_string(act_com)
+      embed = actions.build_embed('Army Commands', '', purple, "Get Random Image:", image_commands, 'Actions:', action_commands)
       await message.channel.send(embed=embed)
 
 
@@ -65,7 +63,7 @@ async def on_message(message):
     #------------------------------------------------
     # Sends a random picture of RM
     #------------------------------------------------
-    if message.content.startswith(f'{tag}{commands[0]}'):
+    if message.content.startswith(f'{tag}{image_com[0]}'):
       folder = f'RM'
       dir_path = f'images/{folder}'
       file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
@@ -75,7 +73,7 @@ async def on_message(message):
     #------------------------------------------------
     # Sends a random picture of Jin
     #------------------------------------------------
-    if message.content.startswith(f'{tag}{commands[1]}'):
+    if message.content.startswith(f'{tag}{image_com[1]}'):
       folder = f'Jin'
       dir_path = f'images/{folder}'
       file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
@@ -85,7 +83,7 @@ async def on_message(message):
     #------------------------------------------------
     # Sends a random picture of SUGA
     #------------------------------------------------
-    if message.content.startswith(f'{tag}{commands[2]}'):
+    if message.content.startswith(f'{tag}{image_com[2]}'):
       folder = f'SUGA'
       dir_path = f'images/{folder}'
       file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
@@ -95,7 +93,7 @@ async def on_message(message):
     #------------------------------------------------
     # Sends a random picture of J-Hope
     #------------------------------------------------
-    if message.content.startswith(f'{tag}{commands[3]}'):
+    if message.content.startswith(f'{tag}{image_com[3]}'):
       folder = f'J-Hope'
       dir_path = f'images/{folder}'
       file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
@@ -105,7 +103,7 @@ async def on_message(message):
     #------------------------------------------------
     # Sends a random picture of Jimin
     #------------------------------------------------
-    if message.content.startswith(f'{tag}{commands[4]}'):
+    if message.content.startswith(f'{tag}{image_com[4]}'):
       folder = f'Jimin'
       dir_path = f'images/{folder}'
       file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
@@ -115,7 +113,7 @@ async def on_message(message):
     #------------------------------------------------
     # Sends a random picture of V
     #------------------------------------------------
-    if message.content.startswith(f'{tag}{commands[5]}'):
+    if message.content.startswith(f'{tag}{image_com[5]}'):
       folder = f'V'
       dir_path = f'images/{folder}'
       file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
@@ -125,7 +123,7 @@ async def on_message(message):
     #------------------------------------------------
     # Shows a ramdom of picture of Jungkook
     #------------------------------------------------
-    if message.content.startswith(f'{tag}{commands[6]}'):
+    if message.content.startswith(f'{tag}{image_com[6]}'):
       folder = f'JK'
       dir_path = f'images/{folder}'
       file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
@@ -136,7 +134,7 @@ async def on_message(message):
     #------------------------------------------------
     # Shows a random picture of their hands
     #------------------------------------------------
-    if message.content.startswith(f'{tag}lets-get-handsy'):
+    if message.content.startswith(f'{tag}{image_com[7]}'):
       folder = f'hands'
       dir_path = f'images/{folder}'
       file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
@@ -147,7 +145,7 @@ async def on_message(message):
     #------------------------------------------------
     # Shows a random picture of RM's chest
     #------------------------------------------------
-    if message.content.startswith(f'{tag}namtiddies'):
+    if message.content.startswith(f'{tag}{image_com[8]}'):
       folder = f'namtiddies'
       dir_path = f'images/{folder}'
       file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
@@ -158,7 +156,7 @@ async def on_message(message):
     #------------------------------------------------
     # Shows a random attack photo
     #------------------------------------------------
-    if message.content.startswith(f'{tag}critical-hit'):
+    if message.content.startswith(f'{tag}{image_com[9]}'):
       folder = f'Attack'
       dir_path = f'images/{folder}'
       file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
@@ -167,7 +165,7 @@ async def on_message(message):
     #------------------------------------------------
     # Shows a random thirst photo of their thighs
     #------------------------------------------------
-    if message.content.startswith(f'{tag}kill-me-with-your-thighs'):
+    if message.content.startswith(f'{tag}{image_com[10]}'):
       folder = f'Booty'
       dir_path = f'images/{folder}'
       file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
@@ -176,7 +174,7 @@ async def on_message(message):
     #------------------------------------------------
     # Shows a random meme
     #------------------------------------------------
-    if message.content.startswith(f'{tag}meme'):
+    if message.content.startswith(f'{tag}{image_com[11]}'):
       folder = f'meme'
       dir_path = f'images/{folder}'
       file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
@@ -186,13 +184,18 @@ async def on_message(message):
 
 
 
+#-------------------------------------------------------
+#
+#***************    ACTION COMMANDS   ****************** 
+#
+#-------------------------------------------------------
 
 
 
     #------------------------------------------------
     # Display the top ten on the hot 100
     #------------------------------------------------
-    if message.content.startswith(f'{tag}hot-100'):
+    if message.content.startswith(f'{tag}{act_com[0]}'):
       chart = billboard.ChartData('hot-100')       
       mes = actions.make_top_ten_string(chart)
       embed = actions.build_embed(chart.title, '', purple, "Top 10", mes, '', '')
@@ -202,7 +205,7 @@ async def on_message(message):
     #------------------------------------------------
     # Showes every place that bts is currently charting on billbord
     #------------------------------------------------
-    if message.content.startswith(f'{tag}where-da-boys-at'):
+    if message.content.startswith(f'{tag}{act_com[1]}'):
       await message.channel.send("checking all Billboard Charts, This may take a minute...")
       mes = actions.find_bts_on_charts()
       count = 1
