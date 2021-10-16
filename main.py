@@ -75,6 +75,11 @@ async def on_message(message):
     #------------------------------------------------
     # Sends a random picture of Jin
     #------------------------------------------------
+    if message.content.startswith(f'{tag}WWH'):
+      folder = f'Jin'
+      dir_path = f'images/{folder}'
+      file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
+      await message.channel.send(file=actions.get_file(file_path))
 
 
     #------------------------------------------------
@@ -91,36 +96,40 @@ async def on_message(message):
     # Sends a random picture of J-Hope
     #------------------------------------------------
     if message.content.startswith(f'{tag}give-me-some-hope'):
-      image_num = random.randint(0,168)
-      filepath = f'images/J-Hope/{image_num}_J-Hope.jpg'
-      await message.channel.send(file=discord.File(filepath))
+      folder = f'J-Hope'
+      dir_path = f'images/{folder}'
+      file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
+      await message.channel.send(file=actions.get_file(file_path))
 
 
     #------------------------------------------------
     # Sends a random picture of Jimin
     #------------------------------------------------
     if message.content.startswith(f'{tag}mr-steal-yo-girl'):
-      image_num = random.randint(0,144)
-      filepath = f'images/Jimin/{image_num}_Jimin.jpg'
-      await message.channel.send(file=discord.File(filepath))
+      folder = f'Jimin'
+      dir_path = f'images/{folder}'
+      file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
+      await message.channel.send(file=actions.get_file(file_path))
 
 
     #------------------------------------------------
     # Sends a random picture of V
     #------------------------------------------------
     if message.content.startswith(f'{tag}gucci-boy'):
-      image_num = random.randint(0,75)
-      filepath = f'images/V/{image_num}_V.jpg'
-      await message.channel.send(file=discord.File(filepath))
+      folder = f'V'
+      dir_path = f'images/{folder}'
+      file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
+      await message.channel.send(file=actions.get_file(file_path))
 
 
     #------------------------------------------------
     # Shows a ramdom of picture of Jungkook
     #------------------------------------------------
     if message.content.startswith(f'{tag}give-me-a-kookie'):
-      image_num = random.randint(0,272)
-      filepath = f'images/JK/{image_num}_JK.jpg'
-      await message.channel.send(file=discord.File(filepath))
+      folder = f'JK'
+      dir_path = f'images/{folder}'
+      file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
+      await message.channel.send(file=actions.get_file(file_path))
 
 
 
@@ -128,43 +137,50 @@ async def on_message(message):
     # Shows a random picture of their hands
     #------------------------------------------------
     if message.content.startswith(f'{tag}lets-get-handsy'):
-      image_num = random.randint(0,34)
-      filepath = f'images/hands/{image_num}_hands.jpg'
-      await message.channel.send(file=discord.File(filepath))
+      folder = f'hands'
+      dir_path = f'images/{folder}'
+      file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
+      await message.channel.send(file=actions.get_file(file_path))
+
 
 
     #------------------------------------------------
     # Shows a random picture of RM's chest
     #------------------------------------------------
     if message.content.startswith(f'{tag}namtiddies'):
-      image_num = random.randint(0,20)
-      filepath = f'images/namtiddies/{image_num}_namtiddies.jpg'
-      await message.channel.send(file=discord.File(filepath))
+      folder = f'namtiddies'
+      dir_path = f'images/{folder}'
+      file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
+      await message.channel.send(file=actions.get_file(file_path))
+
 
 
     #------------------------------------------------
     # Shows a random attack photo
     #------------------------------------------------
     if message.content.startswith(f'{tag}critical-hit'):
-      image_num = random.randint(0,105)
-      filepath = f'images/Attack/{image_num}_Attack.jpg'
-      await message.channel.send(file=discord.File(filepath))
+      folder = f'Attack'
+      dir_path = f'images/{folder}'
+      file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
+      await message.channel.send(file=actions.get_file(file_path))
 
     #------------------------------------------------
     # Shows a random thirst photo of their thighs
     #------------------------------------------------
     if message.content.startswith(f'{tag}kill-me-with-your-thighs'):
-      image_num = random.randint(0,37)
-      filepath = f'images/Booty/{image_num}_Booty.jpg'
-      await message.channel.send(file=discord.File(filepath))
+      folder = f'Booty'
+      dir_path = f'images/{folder}'
+      file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
+      await message.channel.send(file=actions.get_file(file_path))
 
     #------------------------------------------------
     # Shows a random meme
     #------------------------------------------------
     if message.content.startswith(f'{tag}meme'):
-      image_num = random.randint(0,37)
-      filepath = f'images/meme/{image_num}_meme.jpg'
-      await message.channel.send(file=discord.File(filepath))
+      folder = f'meme'
+      dir_path = f'images/{folder}'
+      file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
+      await message.channel.send(file=actions.get_file(file_path))
 
 
 
