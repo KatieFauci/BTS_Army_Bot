@@ -7,6 +7,9 @@ authors = ["KatieFauci <<>>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 discord = "^1.7.3"
+lyricscorpora = "^1.0.0"
+maxembeds = "^0.0.1"
+"billboard.py" = "^6.2.1"
 
 [tool.poetry.dev-dependencies]
 
