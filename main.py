@@ -218,19 +218,6 @@ async def on_message(message):
 
 
 
-    # test file extension detect
-    if message.content.startswith(f'{tag}test'):
-      image_num = random.randint(0,3)
-      filepath = f'images/file_type_test/{image_num}_test.'
-      #await message.channel.send(file=discord.File("images/file_type_test/0_test..jpg"))
-      await message.channel.send(file=actions.get_file(filepath))
-
-
-
-
-
-
-
 
     if message.content.startswith("<3*embed-test"):
       mes = ''
