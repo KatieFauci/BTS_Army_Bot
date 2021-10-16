@@ -1,5 +1,6 @@
 import billboard
 from MaxEmbeds import EmbedBuilder
+import discord
 
 
 
@@ -64,5 +65,17 @@ def build_embed(ti, desc, col, f_title, f_mes, foot, tn):
     thumbnail = tn
   ).build()
   return embed
+
+
+def get_file(path):
+  try:
+    # try finding file as .jpg
+    return discord.File(f'{path}.jpg')
+  except:
+    #try finding file as .gif
+    try:
+      return discord.File(f'{path}.gif')
+    except:
+      print("FILE NOT FOUND")
 
 

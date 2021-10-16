@@ -59,7 +59,7 @@ async def on_message(message):
     #------------------------------------------------
     if message.content.startswith(f'{tag}joon-joon'):
       image_num = random.randint(0,129)
-      filepath = f'images/RM/{image_num}_RM.jpg'
+      filepath = f'images/RM/{image_num}_RM'
       await message.channel.send(file=discord.File(filepath))
 
 
