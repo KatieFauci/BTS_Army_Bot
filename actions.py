@@ -11,7 +11,7 @@ import os
 def commands_string(commands):
   output = ''
   for com in commands:
-    output = output + f'-  {com}\n'
+    output = output + f'-  {com}\t\n'
 
   return output
 
@@ -52,6 +52,7 @@ def find_bts_on_charts():
   return output
 
 
+
 #------------------------------------------------
 # checks every billboard chart for BTS
 # input: Title, Description, Color, Fields, Footer, thumbnail
@@ -61,11 +62,11 @@ def build_embed(ti, desc, col, f_title, f_mes, foot, tn):
     title = ti, 
     description = desc,
     color = col,
-    fields = [[f_title, f_mes, True]],
     footer = foot,
     thumbnail = tn
   ).build()
   return embed
+
 
 
 def get_file(path):
@@ -79,6 +80,8 @@ def get_file(path):
       return discord.File(f'{path}.gif')
     except:
       print("ERROR: FILE NOT FOUND")
+
+
 
 def get_range(dir):
   orig_dir = os.getcwd()

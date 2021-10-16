@@ -19,7 +19,8 @@ image_com = ['joon-joon',
             'lets-get-handsy',
             'namtiddies',
             'critical-hit',
-            'kill-me-with-your-thighs',]
+            'kill-me-with-your-thighs',
+            'meme',]
 
 act_com = ['hot-100',
           'where-da-boys-at',]
@@ -48,8 +49,18 @@ async def on_message(message):
     #------------------------------------------------
     if message.content.startswith(f'{tag}help'):
       image_commands = actions.commands_string(image_com)
-      action_commands = actions.commanfs_string(act_com)
-      embed = actions.build_embed('Army Commands', '', purple, "Get Random Image:", image_commands, 'Actions:', action_commands)
+      action_commands = actions.commands_string(act_com)
+     # embed = actions.build_embed('Army Commands', '', purple, "Get Random Image:", image_commands, 'Actions:', action_commands)
+
+      embed = EmbedBuilder (
+        title = 'Army Commands', 
+        description = '',
+        color = discord.Color.purple(),
+        fields = [["Get Images:", image_commands, True],["Actions:", action_commands, True]],
+        footer = '',
+        thumbnail = ''
+      ).build()
+
       await message.channel.send(embed=embed)
 
 
