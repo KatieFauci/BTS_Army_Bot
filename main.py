@@ -65,19 +65,6 @@ async def on_message(message):
     #------------------------------------------------
     # Sends a random picture of RM
     #------------------------------------------------
-    #if message.content.startswith(f'{tag}joon-joon'):
-      #end = actions.get_range("images/RM")
-      #print(f'RANGE >> {end}')
-     # image_num = random.randint(0,actions.get_range("images/RM"))
-      #image_num = random.randint(0, 50);
-     # filepath = f'images/RM/{image_num}_RM'
-     # print(f'FILE PATH >> {filepath}')
-      #await message.channel.send(file=discord.File(filepath))
-      #await message.channel.send(file=discord.File('images/RM/102_RM.jpg'))
-     # await message.channel.send(file=actions.get_file(filepath))
-
-
-
     if message.content.startswith(f'{tag}joon-joon'):
       folder = f'RM'
       dir_path = f'images/{folder}'
@@ -94,9 +81,10 @@ async def on_message(message):
     # Sends a random picture of SUGA
     #------------------------------------------------
     if message.content.startswith(f'{tag}pour-some-suga-on-me'):
-      image_num = random.randint(0,581)
-      filepath = f'images/Suga/{image_num}_Suga.jpg'
-      await message.channel.send(file=discord.File(filepath))
+      folder = f'SUGA'
+      dir_path = f'images/{folder}'
+      file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
+      await message.channel.send(file=actions.get_file(file_path))
 
 
     #------------------------------------------------
