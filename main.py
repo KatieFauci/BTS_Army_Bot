@@ -10,8 +10,8 @@ client = discord.Client()
 purple = discord.Color.purple()
 tag = '*'
 commands = {'joon-joon', 
-            'pour-some-suga-on-me',
             'WWH',
+            'pour-some-suga-on-me',
             'give-me-some-hope',
             'mr-steal-yo-girl',
             'gucci-boy',
@@ -65,7 +65,7 @@ async def on_message(message):
     #------------------------------------------------
     # Sends a random picture of RM
     #------------------------------------------------
-    if message.content.startswith(f'{tag}joon-joon'):
+    if message.content.startswith(f'{tag}{commands[0]}'):
       folder = f'RM'
       dir_path = f'images/{folder}'
       file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
@@ -75,7 +75,7 @@ async def on_message(message):
     #------------------------------------------------
     # Sends a random picture of Jin
     #------------------------------------------------
-    if message.content.startswith(f'{tag}WWH'):
+    if message.content.startswith(f'{tag}{commands[1]}'):
       folder = f'Jin'
       dir_path = f'images/{folder}'
       file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
@@ -85,7 +85,7 @@ async def on_message(message):
     #------------------------------------------------
     # Sends a random picture of SUGA
     #------------------------------------------------
-    if message.content.startswith(f'{tag}pour-some-suga-on-me'):
+    if message.content.startswith(f'{tag}{commands[2]}'):
       folder = f'SUGA'
       dir_path = f'images/{folder}'
       file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
@@ -95,7 +95,7 @@ async def on_message(message):
     #------------------------------------------------
     # Sends a random picture of J-Hope
     #------------------------------------------------
-    if message.content.startswith(f'{tag}give-me-some-hope'):
+    if message.content.startswith(f'{tag}{commands[3]}'):
       folder = f'J-Hope'
       dir_path = f'images/{folder}'
       file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
@@ -105,7 +105,7 @@ async def on_message(message):
     #------------------------------------------------
     # Sends a random picture of Jimin
     #------------------------------------------------
-    if message.content.startswith(f'{tag}mr-steal-yo-girl'):
+    if message.content.startswith(f'{tag}{commands[4]}'):
       folder = f'Jimin'
       dir_path = f'images/{folder}'
       file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
@@ -115,7 +115,7 @@ async def on_message(message):
     #------------------------------------------------
     # Sends a random picture of V
     #------------------------------------------------
-    if message.content.startswith(f'{tag}gucci-boy'):
+    if message.content.startswith(f'{tag}{commands[5]}'):
       folder = f'V'
       dir_path = f'images/{folder}'
       file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
@@ -125,7 +125,7 @@ async def on_message(message):
     #------------------------------------------------
     # Shows a ramdom of picture of Jungkook
     #------------------------------------------------
-    if message.content.startswith(f'{tag}give-me-a-kookie'):
+    if message.content.startswith(f'{tag}{commands[6]}'):
       folder = f'JK'
       dir_path = f'images/{folder}'
       file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
