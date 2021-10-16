@@ -183,6 +183,12 @@ async def on_message(message):
         count = count + 1
 
 
+    # test file extension detect
+    if message.content.startswith(f'{tag}check-file-type'):
+      image_num = random.randint(0,3)
+      filepath = f'images/file_type_test/{image_num}_test.'
+      await message.channel.send(file=actions.get_file(filepath))
+
 
 
 
