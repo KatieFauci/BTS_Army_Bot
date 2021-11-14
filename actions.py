@@ -4,6 +4,13 @@ import discord
 import os
 
 
+#------------------------------------------------
+# get a channel ID
+#------------------------------------------------
+def get_channel_id(channel_name, client):
+  channel = discord.utils.get(client.get_all_channels(), name=channel_name)
+  return channel.id
+
 
 #------------------------------------------------
 # build display string for commands
