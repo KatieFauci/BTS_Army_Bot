@@ -167,7 +167,7 @@ async def on_message(message):
     # Shows a random picture of their hands
     #------------------------------------------------
     if message.content.startswith(f'{tag}{image_com[7]}'):
-      folder = f'hands'
+      folder = f'Hands'
       dir_path = f'images/{folder}'
       file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
       await message.channel.send(file=actions.get_file(file_path))
