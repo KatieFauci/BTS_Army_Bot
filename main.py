@@ -27,24 +27,6 @@ act_com = ['hot-100',
           'where-da-boys-at',]
 
 
-#------------------------------------------------
-# Give roles based on action
-#------------------------------------------------
-@client.event
-async def on_ready():
-  channel = discord.utils.get(client.get_all_channels(), name="welcome").id
-  text = 'YOUR MESSAGE HERE'
-  Moji = await client.send_message(channel, text)
-  await client.add_reaction(Moji, emoji=":purple_heart:")
-
-@client.event
-async def on_reaction_add(reaction, user):
-  channel = discord.utils.get(client.get_all_channels(), name="welcome").id
-  if reaction.message.channel.id != channel:
-    return
-  if reaction.emoji == ":purple_heart:":
-    Role = discord.utils.get(user.server.roles, name="temp")
-    await client.add_roles(user, Role)
 
 
 #------------------------------------------------
@@ -52,7 +34,27 @@ async def on_reaction_add(reaction, user):
 #------------------------------------------------
 @client.event
 async def on_ready():
-    print('We have logged in as {0.user}'.format(client))
+  print('We have logged in as {0.user}'.format(client))
+
+
+#------------------------------------------------
+# Give roles based on action
+#------------------------------------------------
+#@client.event
+#async def on_ready():
+#  channel = discord.utils.get(client.get_all_channels(), name="welcome").id
+#  text = 'YOUR MESSAGE HERE'
+#  Moji = await client.send_message(channel, text)
+#  await client.add_reaction(Moji, emoji=":purple_heart:")
+
+#@client.event
+#async def on_reaction_add(reaction, user):
+#  channel = discord.utils.get(client.get_all_channels(), name="welcome").id
+#  if reaction.message.channel.id != channel:
+#    return
+#  if reaction.emoji == ":purple_heart:":
+#    Role = discord.utils.get(user.server.roles, name="temp")
+#    await client.add_roles(user, Role)
 
 
 #------------------------------------------------
@@ -240,6 +242,9 @@ async def on_message(message):
       mes = actions.make_top_ten_string(chart)
       embed = actions.build_embed(chart.title, '', purple, "Top 10", mes, '', '')
       await message.channel.send(embed=embed)
+
+
+      
 
 
     #------------------------------------------------
