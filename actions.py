@@ -69,11 +69,11 @@ def build_embed(ti, desc, col, f_title, f_mes, foot, tn):
     title = ti, 
     description = desc,
     color = col,
+    fields = [[f_title, f_mes, True]],
     footer = foot,
     thumbnail = tn
   ).build()
   return embed
-
 
 
 def get_file(path):
