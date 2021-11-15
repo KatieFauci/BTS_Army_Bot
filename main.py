@@ -178,7 +178,7 @@ async def on_message(message):
     # Shows a random picture of RM's chest
     #------------------------------------------------
     if message.content.startswith(f'{tag}{image_com[8]}'):
-      folder = f'namtiddies'
+      folder = f'Namtiddies'
       dir_path = f'images/{folder}'
       file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
       await message.channel.send(file=actions.get_file(file_path))
@@ -207,7 +207,7 @@ async def on_message(message):
     # Shows a random meme
     #------------------------------------------------
     if message.content.startswith(f'{tag}{image_com[11]}'):
-      folder = f'meme'
+      folder = f'Meme'
       dir_path = f'images/{folder}'
       file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
       await message.channel.send(file=actions.get_file(file_path))
@@ -217,7 +217,7 @@ async def on_message(message):
     # Shows a random love photo
     #------------------------------------------------
     if message.content.startswith(f'{tag}{image_com[12]}'):
-      folder = f'heart'
+      folder = f'Heart'
       dir_path = f'images/{folder}'
       file_path = f'{dir_path}/{random.randint(0,actions.get_range(dir_path))}_{folder}'
       await message.channel.send(file=actions.get_file(file_path))
